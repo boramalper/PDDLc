@@ -1,8 +1,8 @@
-# PDDLC
+# PDDLc
 *Bora's PDDL Companion*
 
-PDDLC is a small script that helps you **check** (syntax) and **plan** using
-PDDL.
+**PDDLc** is a small *companion* script that helps you **check** (syntax) and
+**plan** using PDDL.
 
 Developed for the [2D - Reasoning and Agents](https://www.inf.ed.ac.uk/teaching/courses/inf2d/) course in [The University of Edinburgh](https://www.ed.ac.uk/).
 
@@ -10,7 +10,7 @@ Developed for the [2D - Reasoning and Agents](https://www.inf.ed.ac.uk/teaching/
 ## Usage
 1. Ensure that you have a working Java 8 runtime (already provided on DICE).
 2. Clone the repository.
-   - OR, you can also selectively download `pddlc.py` and `pddl4j(...).jar`
+   - OR, you can also selectively download `pddlc.py` and `pddl4j-X.X.X.jar`
      files. You must then ensure that the files are in the same directory.
 
 ### Checking Syntax
