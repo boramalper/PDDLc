@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 PDDL4J_JAR = "./pddl4j-3.8.2.jar"
 
 def main(argv):
-    print("Bora's PDDL Companion v0.1.0", end="\n\n")
+    print("Bora's PDDL Companion v0.2.0", end="\n\n")
 
     if len(argv) == 4 and argv[1] == "check":
         check(domain_path=argv[2], problem_path=argv[3])
@@ -33,6 +33,7 @@ def check(domain_path, problem_path):
             problem_path
     )
     os.system(s)
+    print()
 
 
 def plan(domain_path, problem_path):
@@ -43,7 +44,7 @@ def plan(domain_path, problem_path):
 
     req = Request("http://solver.planning.domains/solve")
     req.add_header("Content-Type", "application/json")
-    resp = json.loads(urlopen(req, json.dumps(data).encode("ascii")).read())
+    resp = json.loads(urlopen(req, json.dumps(data).encode("ascii")).read().decode("ascii"))
 
     print("Status:", resp["status"])
     print("Parsing status:", resp["result"]["parse_status"])
