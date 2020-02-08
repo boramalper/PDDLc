@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 PDDL4J_JAR = "./pddl4j-3.8.2.jar"
 
 def main(argv):
-    print("Bora's PDDL Companion v0.2.0", end="\n\n")
+    print("Bora's PDDL Companion v0.3.0", end="\n\n")
 
     if len(argv) == 4 and argv[1] == "check":
         check(domain_path=argv[2], problem_path=argv[3])
@@ -60,7 +60,7 @@ def plan(domain_path, problem_path):
     else:
             print("================ PLAN")
             for p in resp["result"]["plan"]:
-                    print("\t%s" % (p["name"], ))
+                    print("\t%s" % (p, ))
 
             print()
             print("================ OUTPUT")
